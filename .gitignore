@@ -1,0 +1,5 @@
+venv
+*.pyc
+market.db
+*.egg-info
+__pycache__
