@@ -32,3 +32,15 @@ This repository contains the code for the Marketplace service demo to follow alo
     ```sh
     python3.12 marketsvc/server.py
     ```
+
+4. In a new terminal window, run the cURL commands:
+
+    ```sh
+    ./run.sh customers
+    ```
+
+    which is equivalent to
+
+    ```sh
+    curl http://localhost:9090/api/customers
+    ```
