@@ -10,7 +10,7 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 authors = [
   { name = "Aya Elsayed", email = "ayah.ehab11@gmail.com" },
-  { name = "Rhythm Patel", email = "rhythmpatel200@gmail.com" },
+  { name = "Rhythm Patel", email = "rhythmkumar18083@iiitd.ac.in" },
 ]
 dependencies = []
 
