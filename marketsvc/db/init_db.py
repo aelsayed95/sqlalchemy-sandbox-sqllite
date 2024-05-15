@@ -1,7 +1,7 @@
 import pathlib
 import aiosqlite
 
-DB_PATH = 'market.db'
+DB_PATH = 'marketdb'
 
 async def init_db(): 
     path = pathlib.Path('marketsvc') / 'db' / 'init_db.sql'
