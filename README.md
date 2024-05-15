@@ -33,7 +33,7 @@ This repository contains the code for the Marketplace service demo to follow alo
     python3.12 marketsvc/server.py
     ```
 
-4. In a new terminal window, run the cURL commands:
+4. In a new terminal window, run the `curl` commands:
 
     ```sh
     ./run.sh customers
