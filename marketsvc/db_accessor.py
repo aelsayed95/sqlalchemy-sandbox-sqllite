@@ -120,25 +120,23 @@ async def add_new_order_for_customer(customer_id, items):
         )
         new_order_id = result[0]
 
-        (
-            await execute_insert_queries(
-                """
-            INSERT INTO order_items
-                (order_id, item_id, quantity)
-            VALUES
-                (:order_id, :item_id, :quantity)
-            """,
-                [
-                    {
-                        "order_id": new_order_id,
-                        "item_id": item["id"],
-                        "quantity": item["quantity"],
-                    }
-                    for item in items
-                ],
-            )
+        await execute_insert_queries(
+            """
+        INSERT INTO order_items
+            (order_id, item_id, quantity)
+        VALUES
+            (:order_id, :item_id, :quantity)
+        """,
+            [
+                {
+                    "order_id": new_order_id,
+                    "item_id": item["id"],
+                    "quantity": item["quantity"],
+                }
+                for item in items
+            ],
         )
-
+        
         return True
 
     except Exception:

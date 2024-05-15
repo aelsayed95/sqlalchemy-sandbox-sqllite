@@ -1,5 +1,5 @@
 venv
 *.pyc
-market.db
+marketdb
 *.egg-info
 __pycache__
