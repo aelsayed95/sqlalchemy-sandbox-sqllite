@@ -11,12 +11,12 @@ from db_accessor import (
 )
 from fastapi import FastAPI, HTTPException, Request, status
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 
 @app.get("/")
 def hello():
-    return "<h1>Welcome to MarketPlace!</h1>"
+    return "Welcome to Marketplace!"
 
 
 @app.get("/api/customers")
@@ -66,10 +66,11 @@ async def add_new_order(request: Request):
 
 
 async def main():
-    config = uvicorn.Config("server:app", host="0.0.0.0", port=9090, reload=True)
+    config = uvicorn.Config("server:app", host="127.0.0.1", port=9090, reload=True)
     server = uvicorn.Server(config)
     await init_db()
     await server.serve()
+
 
 if __name__ == "__main__":
     asyncio.run(main())
