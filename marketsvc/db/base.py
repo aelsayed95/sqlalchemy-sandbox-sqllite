@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from sqlalchemy.orm import DeclarativeBase
 
-engine = create_async_engine("sqlite+aiosqlite:///market.db", echo=True)
+engine = create_async_engine("sqlite+aiosqlite:///marketdb", echo=True)
 
 # https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html#using-asyncsession-with-concurrent-tasks
 # The AsyncSession object is a mutable, stateful object which represents a single, stateful database transaction in progress.
