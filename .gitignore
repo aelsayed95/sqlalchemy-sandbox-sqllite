@@ -1,6 +1,6 @@
 venv
 *.pyc
-market.db
+marketdb
 *.egg-info
 __pycache__
 .ruff_cache
