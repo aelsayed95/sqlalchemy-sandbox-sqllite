@@ -47,6 +47,7 @@ def add_new_order(json: dict = Body):
     if not success:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
 
+
 if __name__ == "__main__":
     init_db()
     uvicorn.run("server:app", host="127.0.0.1", port=9090, reload=True)
