@@ -1,7 +1,7 @@
 import pathlib
 import sqlite3
 
-DB_PATH = 'market.db'
+DB_PATH = 'marketdb'
 
 def init_db(): 
     path = pathlib.Path('marketsvc') / 'db' / 'init_db.sql'
